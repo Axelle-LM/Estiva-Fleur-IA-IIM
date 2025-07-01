@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">
+    <title>Reconnaissance de Fleurs - Estiva'Fleurs</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <img src="tournesol.png" alt="Logo Fleur" class="logo-header">
+            <span class="brand-name sigmar-regular">Estiva'Fleurs</span>
+            <nav>
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="reconnaissance.html" class="nav-link active">Reconnaissance</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h1 class="sigmar-regular">Reconnaissance de Fleurs</h1>
+            <input type="file" id="imageInput" accept="image/*">
+            <div id="imagePreview"></div>
+            <button id="predictBtn" class="sigmar-regular">Analyser</button>
+            <div id="result"></div>
+        </div>
+    </main>
+    <footer class="main-footer">
+        <div>© 2024 Estiva'Fleurs — Agence florale moderne & estivale</div>
+        <div>Contact : contact@estivafleurs.com</div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
+    <script src="script.js"></script>
+    <img src="tournesol.png" alt="Tournesol animé" class="tournesol-anim tournesol-gauche">
+    <img src="tournesol.png" alt="Tournesol animé" class="tournesol-anim tournesol-droite">
+</body>
+
+</html>

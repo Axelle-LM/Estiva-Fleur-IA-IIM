@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(120deg, #a8edea 0%, #fed6e3 50%, #fcb69f 100%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    color: #222;
+    position: relative;
+}
+
+/* Fleurs décoratives dans les coins */
+body::before {
+    content: '';
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 220px;
+    height: 220px;
+    background-size: contain;
+    opacity: 0.13;
+    pointer-events: none;
+    z-index: 0;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 180px;
+    height: 180px;
+    background-size: contain;
+    opacity: 0.10;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.main-header {
+    width: 100%;
+    background: transparent;
+    text-align: center;
+    padding: 32px 0 0 0;
+    border: none;
+    box-shadow: none;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-header {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 8px;
+    box-shadow: none;
+}
+
+.brand-name {
+    font-size: 2.2em;
+    color: #ff9800;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+nav {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+}
+
+.nav-link {
+    color: #43a047;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-family: 'Patrick Hand', cursive;
+    padding: 4px 14px;
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.nav-link.active,
+.nav-link:hover {
+    background: #ffb74d33;
+    color: #ff9800;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 0 24px 0;
+    text-align: center;
+    gap: 18px;
+}
+
+.hero h1 {
+    color: #ff9800;
+    font-size: 2.7em;
+    margin-bottom: 8px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.brand-highlight {
+    color: #43a047;
+}
+
+.slogan {
+    font-size: 1.3em;
+    color: #43a047;
+    margin-bottom: 18px;
+    font-family: 'Patrick Hand', cursive;
+}
+
+.cta-btn {
+    background: #ff9800;
+    color: #fff;
+    border: none;
+    border-radius: 24px;
+    padding: 14px 38px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s, transform 0.2s;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: none;
+}
+
+.cta-btn:hover {
+    background: #43a047;
+    color: #fff;
+    transform: scale(1.04);
+}
+
+.hero-flower {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-top: 12px;
+    object-fit: cover;
+    box-shadow: none;
+}
+
+.services {
+    max-width: 500px;
+    margin: 0 auto 48px auto;
+    padding: 0 0 32px 0;
+}
+
+.services h2 {
+    color: #43a047;
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.services-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 340px;
+}
+
+.services-list li {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: rgba(255, 255, 255, 0.25);
+    /* glassmorphism */
+    border-radius: 14px;
+    margin-bottom: 16px;
+    padding: 14px 18px;
+    font-size: 1.1em;
+    color: #222;
+    font-family: 'Patrick Hand', cursive;
+    box-shadow: none;
+    border: 1.5px solid rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.services-list img {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.container {
+    max-width: 420px;
+    margin: 48px auto 32px auto;
+    background: rgba(255, 255, 255, 0.25);
+    /* glassmorphism */
+    padding: 36px 28px 32px 28px;
+    border-radius: 22px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.10);
+    text-align: center;
+    border: 1.5px solid rgba(255, 255, 255, 0.35);
+    position: relative;
+    z-index: 1;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+.container h1 {
+    color: #ff9800;
+    font-size: 2.1em;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    text-align: center;
+}
+
+input[type="file"] {
+    display: block;
+    margin: 0 auto 18px auto;
+    font-size: 1.1em;
+    color: #ff9800;
+    background: rgba(255, 255, 255, 0.25);
+    /* glassmorphism */
+    border: 1.5px solid rgba(255, 255, 255, 0.35);
+    border-radius: 10px;
+    padding: 10px 14px;
+    cursor: pointer;
+    font-family: 'Patrick Hand', cursive;
+    transition: border 0.2s;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+input[type="file"]::file-selector-button {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1em;
+    color: #ff9800;
+}
+
+input[type="file"]:hover {
+    border: 2px solid #ff9800;
+}
+
+#imagePreview img {
+    max-width: 100%;
+    max-height: 220px;
+    margin: 18px 0 10px 0;
+    border-radius: 14px;
+    border: 2px solid #ff9800;
+    background: #fff6;
+    box-shadow: none;
+}
+
+#predictBtn,
+button#predictBtn {
+    background: #ff9800;
+    color: #fff;
+    border: none;
+    border-radius: 24px;
+    padding: 14px 36px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: background 0.2s, transform 0.2s;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: none;
+}
+
+#predictBtn:hover,
+button#predictBtn:hover {
+    background: #43a047;
+    color: #fff;
+    transform: scale(1.04);
+}
+
+#result {
+    margin-top: 28px;
+    font-size: 1.3em;
+    font-family: 'Patrick Hand', cursive;
+    font-weight: 400;
+    color: #43a047;
+    letter-spacing: 0.5px;
+    min-height: 32px;
+    text-shadow: none;
+}
+
+.main-footer {
+    width: 100%;
+    background: transparent;
+    text-align: center;
+    padding: 18px 0 10px 0;
+    font-size: 1.05em;
+    color: #43a047;
+    font-family: 'Patrick Hand', cursive;
+    margin-top: 32px;
+    border: none;
+    box-shadow: none;
+}
+
+@media (max-width: 600px) {
+    body::before {
+        width: 120px;
+        height: 120px;
+    }
+
+    body::after {
+        width: 90px;
+        height: 90px;
+    }
+
+    .header-content {
+        flex-direction: column;
+        gap: 8px;
+        padding: 8px 4vw;
+    }
+
+    .hero h1 {
+        font-size: 1.3em;
+    }
+
+    .hero-flower {
+        width: 80px;
+        height: 80px;
+    }
+
+    .container {
+        max-width: 98vw;
+        padding: 18px 4vw 18px 4vw;
+    }
+
+    .services {
+        padding: 0 0 18px 0;
+    }
+
+    .services-list li {
+        font-size: 1em;
+        padding: 10px 8px;
+    }
+}
+
+.sigmar-regular {
+    font-family: "Sigmar", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.tournesol-anim {
+    position: fixed;
+    max-width: 180px;
+    max-height: 180px;
+    width: auto;
+    height: auto;
+    z-index: 10;
+    opacity: 0.18;
+    pointer-events: none;
+    transition: filter 0.2s;
+    object-fit: contain;
+}
+
+.tournesol-gauche {
+    left: 0;
+    animation: tournesol-haut 10s linear infinite;
+    bottom: -130px;
+}
+
+.tournesol-droite {
+    right: 0;
+    animation: tournesol-bas 12s linear infinite;
+    top: -130px;
+}
+
+@keyframes tournesol-haut {
+    0% {
+        bottom: -130px;
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    85% {
+        opacity: 1;
+    }
+
+    90% {
+        bottom: 100vh;
+        opacity: 0;
+    }
+
+    100% {
+        bottom: -130px;
+        opacity: 0;
+    }
+}
+
+@keyframes tournesol-bas {
+    0% {
+        top: -130px;
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    85% {
+        opacity: 1;
+    }
+
+    90% {
+        top: 100vh;
+        opacity: 0;
+    }
+
+    100% {
+        top: -130px;
+        opacity: 0;
+    }
+}
